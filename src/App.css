@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Google+Sans:200,300,400,500,600,700,900");
+
+.App {
+  color: white;
+  font-family: "Poppins", "Google Sans";
+  margin-bottom: 10rem;
+}
+
+.navee {
+  margin-bottom: 10rem;
+}
