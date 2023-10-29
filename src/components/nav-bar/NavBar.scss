@@ -26,8 +26,13 @@
         gap: 1.6rem;
         align-items: center;
         transition: 0.3s ease-in-out;
+        color: white;
         a {
             cursor: pointer;
+            text-decoration: none;
+            // color: white;
+            font-weight: 400;
+
         }
 
         a:hover, div:hover {

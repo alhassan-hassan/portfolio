@@ -12,6 +12,7 @@ const Profile = (props) => {
       };
 
     const stacks = [
+        ['Single', 'Lost Count Years'],
         ['A Full-Stack Developer', '4 Years'],
         ['A UI/UX Developer', '4 Years'],
         ['A Database Administrator', '3 Years'],
@@ -25,7 +26,7 @@ const Profile = (props) => {
     useEffect(() => {
         const interval = setInterval(() => {
         setCurrentStack((currentStack + 1) % stacks.length);
-        }, 1500);
+        }, 2000);
 
         return () => clearInterval(interval);
     }, [currentStack]);
@@ -53,19 +54,19 @@ const Profile = (props) => {
         <img src={Avatar} alt="wan" />
     </div>
     <div id='socials' className='flex-icons'>
-        <a href="https://github.com/alhassan-hassan" target='_blank'>
+        <a href="https://github.com/alhassan-hassan" target='_blank' title='Github'>
             <FontAwesomeIcon icon={faGithub} style={props.iconStyle} className='icon'/>
         </a>
-        <a href="https://www.linkedin.com/in/hassan-alhassan-7b2a02194" target='_blank'>
+        <a href="https://www.linkedin.com/in/hassan-alhassan-7b2a02194" target='_blank' title='LinkedIn'>
             <FontAwesomeIcon icon={faLinkedin} style={props.iconStyle} className='icon'/>
         </a>
         <a href="https://www.youtube.com/@alhassanhassan2308" target='_blank'>
-            <FontAwesomeIcon icon={faYoutube} style={props.iconStyle} className='icon'/>
+            <FontAwesomeIcon icon={faYoutube} style={props.iconStyle} className='icon' title='YouTube'/>
         </a>
         <a href="https://www.instagram.com/dephnomnal/?hl=en" target='_blank'>
-            <FontAwesomeIcon icon={faInstagram} style={props.iconStyle} className='icon'/>
+            <FontAwesomeIcon icon={faInstagram} style={props.iconStyle} className='icon' title='Instagram'/>
         </a>
-        <a href="https://web.facebook.com/profile.php?id=100009050826862" target='_blank'>
+        <a href="https://web.facebook.com/profile.php?id=100009050826862" target='_blank' title='Facebook'>
             <FontAwesomeIcon icon={faFacebook} style={props.iconStyle} className='icon'/>
         </a>
     </div>

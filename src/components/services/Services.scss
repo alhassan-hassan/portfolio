@@ -1,6 +1,4 @@
 .services {
-    width: 100%;
-    // height: auto;
     background-size: cover; 
     background-repeat: no-repeat;
     background-position: center;
@@ -17,8 +15,7 @@
     .service-tank {
         display: flex;
         justify-content: space-around;
-        // flex-wrap: wrap;
-        width: 88%;
+        width: 93%;
         margin: 5rem auto;
 
     }
@@ -27,7 +24,7 @@
         width: 5px; /* Adjust the width as needed */
         height: auto; /* This will make it a vertical line spanning the full height */
         background-color: #FFF; /* Adjust the color as needed */
-        margin: 0 10px; /* Adjust the margin as needed */
+        margin: 0 0 0 2rem; /* Adjust the margin as needed */
       }
 
       .a-stack {
@@ -40,24 +37,49 @@
         }
 
         .describe {
-            color: rgba(255, 255, 255, 0.7);
+            // color: rgba(255, 255, 255, 0.7);
+            text-align: justify;
         }
     
       }
 
       .main-stack {
         text-align: left;
-
-        div {
-            color: rgba(255, 255, 255, 0.7);
-        }
       }
 
       .stack-icon{
-        color: rgba(238, 137, 97);
+        color: #ee8961;
       }
 
       .checker {
         margin-right: 7px;
+      }
+
+      .checking {
+        margin-bottom: 5px;
+      }
+
+      #data {
+        margin-right: 1.4rem;
+      }
+
+      .to-work {
+        width: 93%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0 auto;
+        font-size: 1.5rem;
+        font-weight: 400;
+        
+        #worker {
+          color: #ee8961;
+          font-size: 2rem;
+        }
+      }
+
+      .bording {
+        width: 35%;
+        height: 1px;
       }
 }

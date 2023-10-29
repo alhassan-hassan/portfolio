@@ -11,17 +11,18 @@ const NavBar = (props) => {
         <div id='name'> Hassan Alhassan</div>
 
         <div id='navs'>
-            <a className='navs-links' onClick={() => props.navToggle("home")} style={props.home ? { borderBottom: "4px solid #EE8961" } : {}}>Home</a>
-            <a className='navs-links' onClick={() => props.navToggle("services")} style={props.services ? { borderBottom: "4px solid #EE8961" } : {}}>Services</a>
-            <a className='navs-links' onClick={() => props.navToggle("projects")} style={props.projects ? { borderBottom: "4px solid #EE8961" } : {}}>Projects</a>
+            <a href="#" className='navs-links' onClick={() => props.navToggle("home")} style={{ borderBottom: props.home ? "4px solid #EE8961" : "none", color: props.bcol }}>Home</a>
+            <a href="#services-top" className='navs-links' onClick={() => props.navToggle("services")} style={{ borderBottom: props.services ? "4px solid #EE8961" : "none", color: props.bcol }}>Services</a>
+            <a href="#projects-top" className='navs-links' onClick={() => props.navToggle("projects")} style={{ borderBottom: props.projects ? "4px solid #EE8961" : "none", color: props.bcol }}>Projects</a>
         </div>
 
-        <div id='mode'>
+        <div id='mode'  style={{ color: props.bcol }}>
             <div onClick={props.onLight}>Light</div>
             <FontAwesomeIcon
                 icon={props.mode ? faToggleOn : faToggleOff}
                 size="lg"
                 className={`icon ${props.mode ? 'dark' : 'light'}`}
+                
             />
 
             <div onClick={props.onDark} >Dark</div>
