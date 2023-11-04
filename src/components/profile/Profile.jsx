@@ -98,9 +98,9 @@ const Profile = (props) => {
               <FontAwesomeIcon icon={faFacebook} style={{color: props.text_col}} className='icon'/>
             </a>
           </div>
-            <div className='get-cv' style={{border: `1px solid ${props.color}`}}  onClick={handleDownloadCV}>
-            Download CV
-            <FontAwesomeIcon icon={faDownload} style={{color: props.text_col}} className='icon'/>
+            <div className='get-cv' style={{border: `1px solid ${props.text_col}`}}  onClick={handleDownloadCV}>
+              Download CV
+              <FontAwesomeIcon icon={faDownload} style={{color: props.text_col}} className='icon'/>
           </div>
         </div>
       </div>
