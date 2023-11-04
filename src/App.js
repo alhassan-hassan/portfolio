@@ -3,6 +3,8 @@ import './App.css';
 import NavBar from '../src/components/nav-bar/NavBar';
 import Profile from '../src/components/profile/Profile';
 import Services from '../src/components/services/Services';
+import Projects from '../src/components/projects/Projects';
+import Contact from './components/contact/Contact';
 
 function App() {
   const [mode, setMode] = useState(true);
@@ -25,10 +27,21 @@ function App() {
     setLinear('linear-gradient(to right, #434343 0%, black 100%)');
   };
 
+
+  const toggleMode =  () => {
+    const current = cols.background;
+    if (current == "white"){
+      onDark()
+    } else {
+      onLight()
+    }
+  }
+
   const scrollToComponent = (componentId) => {
     const element = document.getElementById(componentId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      element.scrollTop = 0;
     }
   };
 
@@ -52,6 +65,7 @@ function App() {
         projects={navs.projects}
         services={navs.services}
         backer={cols.background}
+        toggleMode = {toggleMode}
         navToggle={(chosen) => {
           const updatedNavs = Object.fromEntries(Object.keys(navs).map((key) => [key, false]));
           updatedNavs[chosen] = true;
@@ -64,7 +78,15 @@ function App() {
           <Profile iconStyle={iconStyle} text_col={cols.color} linear={linear} mode={mode} />
         </div>
         <div id="services-top" className="section">
-          <Services iconStyle={iconStyle} text_col={cols.color} linear={linear} mode={mode} />
+          <Services iconStyle={iconStyle} text_col={cols.color} linear={linear} mode={mode} color = {cols.color}/>
+        </div>
+
+        <div id="projects-top" className="section">
+          <Projects iconStyle={iconStyle} linear={linear} mode={mode} color = {cols.color} bg = {cols.background}/>
+        </div>
+
+        <div id="contact-top" className="section">
+          <Contact color = {cols.color}/>
         </div>
       </div>
     </div>

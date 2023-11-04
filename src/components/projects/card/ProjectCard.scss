@@ -1,0 +1,71 @@
+.project-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+    transition: transform 0.5s;
+    margin: 2px;
+    margin-bottom: 6rem;
+}
+
+
+.card{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+
+    
+    .front {
+        display: flex;
+        justify-content: space-between;
+        border-radius: 5px;
+        width: 90%;
+        padding: 0.2rem 1.5rem;
+        transition: 1s ease-in-out;
+        transform: rotateY(360deg);
+        
+        #name_proj {
+            font-size: xx-large;
+        }
+
+        #viewer {
+            color: #EE8961;
+            opacity: 0.8;
+            font-size: 1.1rem;
+            cursor: pointer;
+
+            &:hover {
+                transition: 0.3s ease-in-out;
+                transform: scaleX(1.2);
+                opacity: 1;
+            }
+        }
+
+        .icons-site {
+            margin-top: 2.5rem;
+        }
+        .icon_ {
+          display: block;
+          margin-bottom: 20px; 
+          &:hover{
+              transition: 0.3s ease-in-out;
+              transform: scale(1.09);
+          }
+      }
+    }
+  }
+  
+  .back {
+    width: 100%;
+    min-height: 100px;
+    transition: 1s ease-in-out;
+    transform: rotateY(-180);
+    padding: 1.2rem 1rem;
+    text-align: justify;
+    opacity: 0.7;
+    cursor: pointer;
+  }
+  

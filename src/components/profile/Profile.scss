@@ -36,13 +36,12 @@
         float: right;
         font-size: 2.5rem;
         color: #EE8961;
-        z-index: 1;
     }
 
     .socials {
         display: flex;
         align-items: center;
-        margin-right: 6rem;
+        // margin-right: 2rem;
     }
     
     .avatar-container {
@@ -59,7 +58,16 @@
     .flex-icons {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        align-items: center;
+        
+        #real-icons {
+            margin: 0 auto;
+            // width: 50%;
+            margin-top: 7rem;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
     }
     
     .icon {
@@ -67,7 +75,27 @@
         margin-bottom: 10px; /* Adjust the margin as needed */
         &:hover{
             transition: 0.3s ease-in-out;
-            transform: scale(1.09);
+            transform: scale(1.5);
         }
     }
+}
+
+
+
+.get-cv{
+    margin-top: 8rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-around;
+    border: 1px solid white;
+    padding: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+
+    &:hover {
+        transition: 0.3s ease-in-out;
+        transform: scale(1.2);
+    }
+
 }

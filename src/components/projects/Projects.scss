@@ -1,0 +1,19 @@
+.projects {
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem 4rem;
+
+    #titler {
+        text-align: center;
+        font-size: 2.6rem;
+        font-weight: 400;
+        font-family: 'Poppins';
+    }
+
+    .proj-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}

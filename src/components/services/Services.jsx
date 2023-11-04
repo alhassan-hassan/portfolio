@@ -7,7 +7,12 @@ const Services = (props) => {
   return (
     <div className='services' style={props.mode ? {backgroundImage: `url(${require('../../images/services2.avif')})`} : {background: props.linear}}>
         <p id='announce' style={{color: props.color}}>My Services</p>
-
+        {/* <div className='to-work' >
+            <div className='bording' style={{background: props.color}}></div>
+            <div id='worker'>OPEN TO WORK</div>
+            <div className='bording' style={{background: props.color}}></div>
+        </div>
+         */}
         <div className='service-tank'>
             <div className='a-stack' id='full-stack'>
                 <div className='main-stack'>
@@ -47,11 +52,7 @@ const Services = (props) => {
                 </div>
             </div>
         </div>
-        <div className='to-work' >
-            <div className='bording' style={{background: props.color}}></div>
-            <div id='worker'>OPEN TO WORK</div>
-            <div className='bording' style={{background: props.color}}></div>
-        </div>
+        
         
 
     </div>
