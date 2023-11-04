@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useMemo } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faYoutube, faInstagram, faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
@@ -6,17 +6,14 @@ import './Profile.scss';
 import Avatar from '../../images/phe_one.png';
 
 const Profile = (props) => {
-  const iconStyle = {
-    color: 'white',
-  };
-
-  const stacks = [
+  // Define your stacks array using useMemo
+  const stacks = useMemo(() => [
     ['A Full-Stack Developer', '4 Years'],
     ['A UI/UX Developer', '4 Years'],
     ['A Database Administrator', '3 Years'],
     ['A Cloud Architect', '1.5 Years'],
     ['Scientific Researcher', '2 Years']
-  ];
+  ], []);
 
   const [currentStack, setCurrentStack] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
@@ -60,7 +57,7 @@ const Profile = (props) => {
     }, isTyping ? typingSpeed : eraseSpeed);
 
     return () => clearInterval(interval);
-  }, [currentStack, typewriterText, isTyping, isErasing]);
+  }, [currentStack, typewriterText, isTyping, isErasing, stacks]);
 
   return (
     <div className='profile' style={props.mode ? {backgroundImage: `url(${require('../../images/service_bg.webp')})`} : {background: props.linear}}>
@@ -85,19 +82,19 @@ const Profile = (props) => {
         </div>
         <div id='socials' className='flex-icons'>
           <div id='real-icons'>
-            <a href="https://github.com/alhassan-hassan" target='_blank' title='Github'>
+            <a href="https://github.com/alhassan-hassan" target='_blank' title='Github' rel="noreferrer">
               <FontAwesomeIcon icon={faGithub} style={{color: props.text_col}} className='icon'/>
             </a>
-            <a href="https://www.linkedin.com/in/hassan-alhassan-7b2a02194" target='_blank' title='LinkedIn'>
+            <a href="https://www.linkedin.com/in/hassan-alhassan-7b2a02194" target='_blank' title='LinkedIn' rel="noreferrer">
               <FontAwesomeIcon icon={faLinkedin} style={{color: props.text_col}} className='icon'/>
             </a>
-            <a href="https://www.youtube.com/@alhassanhassan2308" target='_blank'>
-              <FontAwesomeIcon icon={faYoutube} style={{color: props.text_col}} className='icon' title='YouTube'/>
+            <a href="https://www.youtube.com/@alhassanhassan2308" target='_blank' rel="noreferrer">
+              <FontAwesomeIcon icon={faYoutube} style={{color: props.text_col}} className='icon' title='YouTube' />
             </a>
-            <a href="https://www.instagram.com/dephnomnal/?hl=en" target='_blank'>
-              <FontAwesomeIcon icon={faInstagram} style={{color: props.text_col}} className='icon' title='Instagram'/>
+            <a href="https://www.instagram.com/dephnomnal/?hl=en" target='_blank' rel="noreferrer">
+              <FontAwesomeIcon icon={faInstagram} style={{color: props.text_col}} className='icon' title='Instagram' />
             </a>
-            <a href="https://web.facebook.com/profile.php?id=100009050826862" target='_blank' title='Facebook'>
+            <a href="https://web.facebook.com/profile.php?id=100009050826862" target='_blank' title='Facebook' rel="noreferrer">
               <FontAwesomeIcon icon={faFacebook} style={{color: props.text_col}} className='icon'/>
             </a>
           </div>

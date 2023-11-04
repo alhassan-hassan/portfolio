@@ -11,7 +11,7 @@ const NavBar = (props) => {
         <div id='name'> Hassan Alhassan</div>
 
         <div id='navs'>
-            <a href="#" className='navs-links' onClick={() => props.navToggle("home")} style={{ borderBottom: props.home ? "4px solid #ee8961b3" : "none", color: props.bcol }}>Home</a>
+            <a href="#profile-top" className='navs-links' onClick={() => props.navToggle("home")} style={{ borderBottom: props.home ? "4px solid #ee8961b3" : "none", color: props.bcol }}>Home</a>
             <a href="#services-top" className='navs-links' onClick={() => props.navToggle("services")} style={{ borderBottom: props.services ? "4px solid #ee8961b3" : "none", color: props.bcol }}>Services</a>
             <a href="#projects-top" className='navs-links' onClick={() => props.navToggle("projects")} style={{ borderBottom: props.projects ? "4px solid #ee8961b3" : "none", color: props.bcol }}>Projects</a>
         </div>

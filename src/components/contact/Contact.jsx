@@ -87,19 +87,19 @@ const Contact = (props) => {
             <div className='init'>HA</div>
 
             <div id='socials' className='flex-icons'>
-                <a href="https://github.com/alhassan-hassan" target='_blank' title='Github'>
+                <a href="https://github.com/alhassan-hassan" target='_blank' title='Github' rel="noreferrer">
                     <FontAwesomeIcon icon={faGithub} style={{color: props.color}} className='icon'/>
                 </a>
-                <a href="https://www.linkedin.com/in/hassan-alhassan-7b2a02194" target='_blank' title='LinkedIn'>
+                <a href="https://www.linkedin.com/in/hassan-alhassan-7b2a02194" target='_blank' title='LinkedIn' rel="noreferrer">
                     <FontAwesomeIcon icon={faLinkedin} style={{color: props.color}} className='icon'/>
                 </a>
-                <a href="https://www.youtube.com/@alhassanhassan2308" target='_blank'>
+                <a href="https://www.youtube.com/@alhassanhassan2308" target='_blank' rel="noreferrer">
                     <FontAwesomeIcon icon={faYoutube} style={{color: props.color}} className='icon' title='YouTube'/>
                 </a>
-                <a href="https://www.instagram.com/dephnomnal/?hl=en" target='_blank'>
-                    <FontAwesomeIcon icon={faInstagram} style={{color: props.color}} className='icon' title='Instagram'/>
+                <a href="https://www.instagram.com/dephnomnal/?hl=en" target='_blank' rel="noreferrer">
+                    <FontAwesomeIcon icon={faInstagram} style={{color: props.color}} className='icon' title='Instagram' rel="noreferrer"/>
                 </a>
-                <a href="https://web.facebook.com/profile.php?id=100009050826862" target='_blank' title='Facebook'>
+                <a href="https://web.facebook.com/profile.php?id=100009050826862" target='_blank' title='Facebook' rel="noreferrer">
                     <FontAwesomeIcon icon={faFacebook} style={{color: props.color}} className='icon'/>
                 </a>
             </div>

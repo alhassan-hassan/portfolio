@@ -1,6 +1,5 @@
 import React from 'react'
 import './Projects.scss'
-import Catt from '../../images/catt.jpeg'
 import ProjectCard from './card/ProjectCard';
 import {projects} from '../../data/Data'
 

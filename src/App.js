@@ -30,7 +30,7 @@ function App() {
 
   const toggleMode =  () => {
     const current = cols.background;
-    if (current == "white"){
+    if (current === "white"){
       onDark()
     } else {
       onLight()
@@ -74,7 +74,7 @@ function App() {
       />
 
       <div className="below-nav">
-        <div id="#" className="section">
+        <div id="profile-top" className="section">
           <Profile iconStyle={iconStyle} text_col={cols.color} linear={linear} mode={mode} />
         </div>
         <div id="services-top" className="section">

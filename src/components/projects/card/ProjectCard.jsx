@@ -16,10 +16,6 @@ const ProjectCard = (props) => {
     const handleFront = (e) => {
         setIsFlipped(false);
       };
-
-    const iconStyle = {
-        color: 'white',
-      };
   
     return (
       <div className= "project-card " onMouseLeave={handleFront}>
@@ -35,13 +31,13 @@ const ProjectCard = (props) => {
                     </div>
                     <div className='icons-site'>
                         {props.github ? (
-                            <a href={props.github} target='_blank' title='github'>
+                            <a href={props.github} target='_blank' title='github' rel="noreferrer">
                                 <FontAwesomeIcon icon={faGithub} style={{color: props.color}} className='icon_'size='2x'/>
                             </a>
                         ): ""}
 
                         {props.site ? (
-                            <a href={props.site} target='_blank' title='visit site'>
+                            <a href={props.site} target='_blank' title='visit site' rel="noreferrer">
                                 <FontAwesomeIcon icon={faPaperPlane} style={{color: props.color}} className='icon_' size='2x'/>                            </a>
                         ): ""}
                     </div>
